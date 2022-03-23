@@ -1,0 +1,53 @@
+{{define "Cards"}}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/global.css">
+    <link rel="stylesheet" href="static/css/cards.css">
+    <title>Ysound !</title>
+</head>
+
+<body>
+    <div id="menu">
+        <a class="btnMenu" href="/artistes">Artiste</a>
+        <a href="/"><img id="logo" src="static/image/logoYsound2.png" alt="logo de ysound"></a>
+        <a class="btnMenu" href="/groupes">Groupe</a>
+    </div>
+
+    <div id="contents">
+        <h3 class="title One">PRESENTATION :</h3>
+
+        <img class="Picture" src="{{.Artist.Image}}" alt="image de couverture de l'album/logo du groupe">
+        <div class="Info">
+            <div class="InfoOne">
+                <p>Nom {{.Type}} : {{.Artist.Name}}</p>
+                <p>Date création {{.Type}} : {{.Artist.DateCrea}} </p>
+                <p>Date de sortie du premier album : {{.Artist.DateAlbum}}</p>
+                <p>Id {{.Type}} : {{.Artist.Id}} </p>
+            </div>
+
+            <div class="InfoTow">
+                <p>Les membres :</p>
+                {{range .Artist.Members}}
+                <p>{{.}}</p>
+                {{end}}
+
+            </div>
+        </div>
+
+        <h3 class="title Tow">CONCERTS ET TOURNNEES :</h3>
+        <div class="Date">
+            {{range .Contenu.Contenu}}
+            <div class="cntDate">
+                <p> Lieux : {{.Location}},</p>
+                <p>date : {{.Dates}}</p>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</body>
+{{end}}

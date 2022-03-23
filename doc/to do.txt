@@ -1,0 +1,50 @@
+============== Projet Ysound ==============
+
+-> Important
+    - Penser à mettre en place un css global pour le footer et menu !
+    - Faire un logo DONE
+
+-> Page index.html
+    - Faire le menu avec deux bouttons (vers artiste soliste puis vers groupe) DONE
+    - Trouver une bonne police d'ecriture DONE
+    - Mettre en frome toute les poloice d'ecriture dans le css DONE
+    - Mettre une ombre autour de chaque carte
+    - Ajouter un footer avce les creedits....
+
+-> Back en golang
+    - Preparer l'exploitation des deux autres api (dans le but de tout afficher dans le plus d'informations)
+    - Mettre en place les routes manquantes pour les deux bouttons DONE
+
+-> Page Cards.html (btn plus d'inforamtion !)
+    - Integrer tout les données (regarder imbrication des templates !)
+    - Faire la mise en page avec le css
+
+-> Page artiste.html et groupe.html
+    - Reprendre le templates et css de la page index.html DONE
+
+
+
+Police d'ecriture :
+    https://fonts.google.com/specimen/Roboto#standard-styles
+    https://fonts.google.com/specimen/Raleway?preview.size=24&preview.text_type=alphabet  -----
+    https://fonts.google.com/specimen/Maven+Pro?preview.size=24&preview.text_type=alphabet#standard-styles
+    https://fonts.google.com/specimen/Red+Hat+Display?preview.size=24&preview.text_type=alphabet#standard-styles
+    
+/* 	httpClient := http.Client{
+	   		Timeout: time.Second * 2,
+	   	}
+	   	//Creation de la requete HTTP vers l'api
+	   	req, _ := http.NewRequest(http.MethodGet, urlAPI, nil)
+
+	   	//Premet d'eviter la limit d'appelle à l'api ! Il faut le changer de temps en temps !
+	   	req.Header.Set("User_Agent", "123")
+
+	   	//Envoie de la requete HTTP vers l'api !
+	   	res, _ := httpClient.Do(req)
+	   	if res.Body != nil {
+	   		defer res.Body.Close()
+	   	}
+	   	body, _ := ioutil.ReadAll(res.Body)
+
+	   	//Decodage de l'api !
+	   	json.Unmarshal(body, &main) */

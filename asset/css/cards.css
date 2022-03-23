@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    color: #fff;
+    background-color: black;
+    font-size: 1em;
+}
+
+h3{
+    margin: 15px 0px;
+    padding: 0;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+#contents{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    margin-top: 6vh;
+    background-color: black;
+    display: grid;
+    grid-template-columns: [col1] 30% repeat(2, 25% [clo2-3]);
+    grid-template-rows: repeat(4, auto [start-end]);
+    grid-template-areas: 
+        "One One ."
+        "Pic Info Info"
+        "Tow Tow ."
+        "Date Date Date";
+        justify-content: space-evenly;
+}
+
+.One{
+    grid-area: One;
+}
+
+.Picture{
+    grid-area: Pic;
+    justify-self: center
+}
+
+.Tow{
+    grid-area: Tow;
+}
+
+.Info{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    grid-area: Info;
+}
+
+.Date{
+    box-sizing: border-box;
+    padding: 15px 0px;
+    grid-area: Date;
+    justify-self: center;
+    display: flex;
+    flex-flow: row wrap;
+}
+.cntDate{
+    margin-left: 15px;
+}
+
+.Date .cntDate>:nth-child(2),.InfoTow p:not(:nth-child(1)){
+    padding-left: 25px;
+}

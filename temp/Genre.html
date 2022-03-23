@@ -1,0 +1,33 @@
+{{define "Genre"}}
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/css/genre.css">
+        <link rel="stylesheet" href="static/css/global.css">
+        <title>Ysound !</title>
+    </head>
+    <body>
+        <div id="menu">
+            <a class="btnMenu" href="/artistes">Artiste</a>
+            <a href="/"><img id="logo" src="static/image/logoYsound2.png" alt="logo de ysound"></a>
+            <a class="btnMenu" href="/groupes">Groupe</a>
+        </div>
+
+        <div id="contents">
+            <p>Catégorie {{ .Cat}}</p>
+            <div id="listeArt">
+                {{range .Liste}}
+                <div class="cardArt">
+                    <p>{{.Name}}</p>
+                    <img src="{{.Image}}" alt="image">
+                    <a class="btnCard" href="/{{.Id}}">Plus d'infos...</a>
+                </div>
+                {{end}}  
+            </div>
+        </div>
+    </body>
+{{end}}
